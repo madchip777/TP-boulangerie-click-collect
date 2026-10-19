@@ -22,3 +22,26 @@ GET http://localhost:3000/commandes/C0001
 
 ###
 PATCH http://localhost:3000/commandes/C0001/prete
+
+
+### Requete 2
+GET http://localhost:3000/produits
+
+### On l'envois
+POST http://localhost:3000/commandes
+Content-Type: application/json
+
+{
+  "client": "Romain Malin",
+  "telephone": "0612345677",
+  "lignes": [
+    { "produitId": "tarte-pommes-6", "quantite": 2 }
+  ],
+  "retrait": "2026-10-20T08:30:00"
+}
+
+### On la verifie
+GET http://localhost:3000/commandes/C0003
+
+### On la comfirme sur la boulangerie
+PATCH http://localhost:3000/commandes/C0003/prete

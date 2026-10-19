@@ -1,11 +1,95 @@
 {
   "produits": [
-    { "id": "baguette-tradition", "nom": "Baguette tradition", "prix": 130, "stock": 60 },
-    { "id": "croissant", "nom": "Croissant au beurre", "prix": 120, "stock": 40 },
-    { "id": "pain-au-chocolat", "nom": "Pain au chocolat", "prix": 140, "stock": 40 },
-    { "id": "pain-de-campagne", "nom": "Pain de campagne 800 g", "prix": 450, "stock": 15 },
-    { "id": "flan-patissier", "nom": "Part de flan pâtissier", "prix": 320, "stock": 12 },
-    { "id": "tarte-pommes-6", "nom": "Tarte aux pommes 6 parts", "prix": 1800, "stock": 4 }
+    {
+      "id": "baguette-tradition",
+      "nom": "Baguette tradition",
+      "prix": 130,
+      "stock": 56
+    },
+    {
+      "id": "croissant",
+      "nom": "Croissant au beurre",
+      "prix": 120,
+      "stock": 28
+    },
+    {
+      "id": "pain-au-chocolat",
+      "nom": "Pain au chocolat",
+      "prix": 140,
+      "stock": 40
+    },
+    {
+      "id": "pain-de-campagne",
+      "nom": "Pain de campagne 800 g",
+      "prix": 450,
+      "stock": 15
+    },
+    {
+      "id": "flan-patissier",
+      "nom": "Part de flan pâtissier",
+      "prix": 320,
+      "stock": 12
+    },
+    {
+      "id": "tarte-pommes-6",
+      "nom": "Tarte aux pommes 6 parts",
+      "prix": 1800,
+      "stock": 2
+    }
   ],
-  "commandes": []
+  "commandes": [
+    {
+      "id": "C0001",
+      "client": "Camille Martin",
+      "telephone": "0612345678",
+      "lignes": [
+        {
+          "produitId": "baguette-tradition",
+          "quantite": 2
+        },
+        {
+          "produitId": "croissant",
+          "quantite": 6
+        }
+      ],
+      "retrait": "2026-10-20T08:30:00",
+      "total": 980,
+      "statut": "PRETE",
+      "creeLe": "2026-10-19T07:58:29.425Z"
+    },
+    {
+      "id": "C0002",
+      "client": "Camille Martin",
+      "telephone": "0612345678",
+      "lignes": [
+        {
+          "produitId": "baguette-tradition",
+          "quantite": 2
+        },
+        {
+          "produitId": "croissant",
+          "quantite": 6
+        }
+      ],
+      "retrait": "2026-10-20T08:30:00",
+      "total": 980,
+      "statut": "EN_ATTENTE",
+      "creeLe": "2026-10-19T08:02:27.583Z"
+    },
+    {
+      "id": "C0003",
+      "client": "Romain Malin",
+      "telephone": "0612345677",
+      "lignes": [
+        {
+          "produitId": "tarte-pommes-6",
+          "quantite": 2
+        }
+      ],
+      "retrait": "2026-10-20T08:30:00",
+      "total": 3240,
+      "statut": "PRETE",
+      "creeLe": "2026-10-19T08:11:30.536Z"
+    }
+  ]
 }

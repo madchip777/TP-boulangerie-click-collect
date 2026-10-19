@@ -1,2 +1,17 @@
-DDD -> orienté produit selon le metier
+DDD = domain driven design -> orienté produit selon le metier
+
+Pour divisé les differente couche pour repartire une infrastructure de projet :
+
+Présentation / Métier / Infrastructure
+
+Ex : Vitrine ou forme du produit ; Cuisine ou élément d'une recette ; Stock ou chambre froid
+
+De sorte pour distingé si la tâche est Métier, on ce demande si elle peut être fait sur papier (ex math)
+
+Pour la sécurité + la flexibilité du code, mais principalement évité toute boucle de dépendance, on respecte l'ordre :
+
+La Presentation peut importé du Métier, 
+Le Métier peut importé de l'Infrastructure.
+Mais rien de plus!
+
 
