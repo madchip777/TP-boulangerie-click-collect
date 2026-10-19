@@ -21,5 +21,15 @@ Le Métier peut importé de l'Infrastructure.
 Mais rien de plus! (la prez n'importe jamais l'infra, l'infra n'importe jamais du metier, et le metier n'importe jamais de la prez)
 
 
-
+//┌──────────────────────────────┐
+//│ Prezentation (routes HTTP)   │
+//└──────────────┬───────────────┘
+//               ▼
+//┌──────────────────────────────┐
+//│ Metier (CommandeService)     │
+//└──────────────┬───────────────┘
+//               ▼
+//┌──────────────────────────────┐
+//│ Infrastructure (JSON, SMS)   │
+//└──────────────────────────────┘
 

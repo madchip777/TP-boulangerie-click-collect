@@ -74,7 +74,7 @@ app.post('/commandes', (req, res) => {
     return res.status(400).json({ erreur: 'Retrait entre 7h et 19h30' });
   }
 
-// Metier
+  // Metier
   // Remise fidélité : -10 % dès 30 €
   if (total >= 3000) {
     total = Math.round(total * 0.9);
@@ -110,9 +110,10 @@ app.get('/commandes/:id', (req, res) => {
   const db = JSON.parse(fs.readFileSync(DB_FILE, 'utf-8'));
   // Metier
   const commande = db.commandes.find((c: any) => c.id === req.params.id);
-  if (!commande)
+  if (!commande) {
     // Prez
     return res.status(404).json({ erreur: 'Commande introuvable' });
+  }
   res.json(commande);
 });
 
@@ -121,9 +122,10 @@ app.patch('/commandes/:id/prete', (req, res) => {
   const db = JSON.parse(fs.readFileSync(DB_FILE, 'utf-8'));
   // Metier
   const commande = db.commandes.find((c: any) => c.id === req.params.id);
-  if (!commande)
+  if (!commande) {
     // Prez
     return res.status(404).json({ erreur: 'Commande introuvable' });
+  }
   // Metier
   if (commande.statut !== 'EN_ATTENTE') {
     // Prez
