@@ -1,6 +1,4 @@
-# boulangerie-click-collect-seance1
-
-Le Fournil de Serris - Click & Collect (fil rouge du module Architecture Hexagonale & DDD, Bachelor 3).
+# Le Fournil de Serris - Click & Collect (fil rouge du module Architecture Hexagonale & DDD, Bachelor 3).
 
 **État de ce kit :** version historique, tout le code est dans `src/main.ts`.
 
