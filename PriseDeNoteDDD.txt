@@ -1,0 +1,2 @@
+DDD -> orienté produit selon le metier
+

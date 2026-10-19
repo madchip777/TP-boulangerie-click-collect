@@ -1,0 +1,24 @@
+### Fournil de Serris - requêtes de démonstration (extension VS Code « REST Client »)
+### Remplacez la date de retrait par une date future, au moins 2 h plus tard, entre 7h et 19h30.
+
+GET http://localhost:3000/produits
+
+###
+POST http://localhost:3000/commandes
+Content-Type: application/json
+
+{
+  "client": "Camille Martin",
+  "telephone": "0612345678",
+  "lignes": [
+    { "produitId": "baguette-tradition", "quantite": 2 },
+    { "produitId": "croissant", "quantite": 6 }
+  ],
+  "retrait": "2026-10-20T08:30:00"
+}
+
+###
+GET http://localhost:3000/commandes/C0001
+
+###
+PATCH http://localhost:3000/commandes/C0001/prete
