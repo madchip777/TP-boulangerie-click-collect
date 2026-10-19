@@ -2,10 +2,6 @@
 // Version « historique » : tout le code est dans ce fichier.
 // Elle fonctionne... mais personne n'ose plus y toucher.
 
-// Prez
-// Metier
-// Infra
-
 import express from 'express';
 import fs from 'node:fs';
 

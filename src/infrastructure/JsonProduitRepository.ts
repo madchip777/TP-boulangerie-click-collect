@@ -9,3 +9,46 @@
 //┌──────────────────────────────┐
 //│ Infrastructure (JSON, SMS)   │
 //└──────────────────────────────┘
+
+
+dblisteproduit = {
+    "produits":
+    [
+        {
+            "id": "baguette-tradition",
+            "nom": "Baguette tradition",
+            "prix": 130,
+            "stock": 56
+        },
+        {
+            "id": "croissant",
+            "nom": "Croissant au beurre",
+            "prix": 120,
+            "stock": 28
+        },
+        {
+            "id": "pain-au-chocolat",
+            "nom": "Pain au chocolat",
+            "prix": 140,
+            "stock": 40
+        },
+        {
+            "id": "pain-de-campagne",
+            "nom": "Pain de campagne 800 g",
+            "prix": 450,
+            "stock": 15
+        },
+        {
+            "id": "flan-patissier",
+            "nom": "Part de flan pâtissier",
+            "prix": 320,
+            "stock": 12
+        },
+        {
+            "id": "tarte-pommes-6",
+            "nom": "Tarte aux pommes 6 parts",
+            "prix": 1800,
+            "stock": 2
+        }
+    ]
+}
