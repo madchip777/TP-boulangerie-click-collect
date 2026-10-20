@@ -14,7 +14,7 @@ Content-Type: application/json
     { "produitId": "baguette-tradition", "quantite": 2 },
     { "produitId": "croissant", "quantite": 6 }
   ],
-  "retrait": "2026-10-20T08:30:00"
+  "retrait": "2026-10-21T08:30:00"
 }
 
 ###

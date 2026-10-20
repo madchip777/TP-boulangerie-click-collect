@@ -23,7 +23,7 @@ curl http://localhost:3000/produits
 
 ## Données
 
-`data/db.json` sert de base de données. Pour repartir de zéro, remettez `"commandes": []` et les stocks d'origine
+`data/jsonDb.json` sert de base de données. Pour repartir de zéro, remettez `"commandes": []` et les stocks d'origine
 (ou récupérez le fichier depuis le zip).
 Les prix sont en **centimes** (130 = 1,30 €).
 

@@ -33,3 +33,8 @@ Mais rien de plus! (la prez n'importe jamais l'infra, l'infra n'importe jamais d
 //│ Infrastructure (JSON, SMS)   │
 //└──────────────────────────────┘
 
+Test Unitaire = test simple -> retour dans le terminal
+Test END2END = robot qui teste physiquement un produit, test de bout en bout, souvent avec GUI.
+
+1 UseCase = 1 Action (direction métier)
+
