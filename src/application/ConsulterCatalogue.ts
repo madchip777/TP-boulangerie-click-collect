@@ -1,6 +1,10 @@
-import {JsonProduitRepository} from "../adapters/secondaires/json/JsonProduitRepository";
+import type { Produit } from '../domain/types';
+import type { ProduitRepository } from './ports/ProduitRepository';
 
+export class ConsulterCatalogue {
+    constructor(private readonly produits: ProduitRepository) {}
 
-export function ConsulterCatalogue(JPR: JsonProduitRepository) {
-    return JPR.tous()
+    executer(): Promise<Produit[]> {
+        return this.produits.tous();
+    }
 }

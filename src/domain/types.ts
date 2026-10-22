@@ -1,15 +1,18 @@
 // Le domaine : le vocabulaire de la boulangerie. Aucun import technique ici.
 export type StatutCommande = 'EN_ATTENTE' | 'PRETE' | 'RETIREE' | 'ANNULEE';
+
 export interface Produit {
     id: string;
     nom: string;
     prix: number; // en centimes
     stock: number;
 }
+
 export interface LigneCommande {
     produitId: string;
     quantite: number;
 }
+
 export interface Commande {
     id: string;
     client: string;
@@ -19,4 +22,5 @@ export interface Commande {
     total: number; // en centimes
     statut: StatutCommande;
     creeLe: string;
+    retireeLe?: string; // ajouté avec la route historique de retrait
 }

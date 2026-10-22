@@ -1,6 +1,7 @@
-export class HorlogeSysteme {
-    
-}
+import type { Horloge } from '../../../application/ports/Horloge';
 
-new Date()
-return
+export class HorlogeSysteme implements Horloge {
+    maintenant(): Date {
+        return new Date();
+    }
+}

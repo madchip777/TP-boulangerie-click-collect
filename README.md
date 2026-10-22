@@ -1,8 +1,8 @@
-# Le Fournil de Serris - Click & Collect (fil rouge du module Architecture Hexagonale & DDD, Bachelor 3).
+#Le Fournil de Serris - Click & Collect (fil rouge du module Architecture Hexagonale & DDD, Bachelor 3).
 
-**État de ce kit :** version historique, tout le code est dans `legacy`.
+**État de ce kit :** hexagone en place (fin de séance 2) + code historique ajouté en urgence dans `src/legacy/routesHistoriques.ts` (prête, annulation, retrait).
 
-**Objectif de la séance :** repérer les responsabilités mélangées puis découper l'application en trois couches (livret S1).
+**Objectif de la séance :** migrer le code historique dans l'hexagone sans changer son comportement (livret S3, TP1).
 
 ## Démarrer
 
@@ -23,7 +23,7 @@ curl http://localhost:3000/produits
 
 ## Données
 
-`data/jsonDb.json` sert de base de données. Pour repartir de zéro, remettez `"commandes": []` et les stocks d'origine
+`data/db.json` sert de base de données. Pour repartir de zéro, remettez `"commandes": []` et les stocks d'origine
 (ou récupérez le fichier depuis le zip).
 Les prix sont en **centimes** (130 = 1,30 €).
 
@@ -35,3 +35,8 @@ Les prix sont en **centimes** (130 = 1,30 €).
 - Cycle de vie : EN_ATTENTE → PRETE → RETIREE ; une commande EN_ATTENTE peut être ANNULEE (le stock est remis).
 - Le client reçoit un SMS quand sa commande est prête ou annulée (simulé dans la console).
 
+## Tests de caractérisation
+
+`tests/outils/appDeTest.ts` construit l'application complète sur une **copie** de `data/db.json` :
+vos tests HTTP (supertest) ne modifient jamais la vraie base. Écrivez vos tests de caractérisation dans
+`tests/caracterisation/`.

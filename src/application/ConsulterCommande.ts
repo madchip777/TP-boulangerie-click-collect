@@ -1,8 +1,13 @@
-import { JsonCommandeRepository } from "../adapters/secondaires/json/JsonCommandeRepository";
-import {ErreurMetier} from "../domain/ErreurMetier";
+import type { Commande } from '../domain/types';
+import { ErreurMetier } from '../domain/ErreurMetier';
+import type { CommandeRepository } from './ports/CommandeRepository';
 
-export function ConsulterCommande(id: string, JCR: JsonCommandeRepository) {
-    const commande = JCR.trouverParId(id);
-    if (!commande) throw new ErreurMetier('Commande introuvable', 404.11);
-    return commande;
+export class ConsulterCommande {
+    constructor(private readonly commandes: CommandeRepository) {}
+
+    async executer(id: string): Promise<Commande> {
+        const commande = await this.commandes.trouverParId(id);
+        if (!commande) throw new ErreurMetier('Commande introuvable', 404.11);
+        return commande;
+    }
 }

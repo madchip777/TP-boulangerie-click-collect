@@ -1,43 +1,34 @@
-// Archi
-// Couche présentation : traduit HTTP ↔ appels au métier. Aucune règle ici.
-import { Router, Response } from 'express';
-import { repondreErreur } from "./erreurs";
-import { PasserCommande } from "../../../application/PasserCommande"
-import { ConsulterCommande } from "../../../application/ConsulterCommande"
-import { ConsulterCatalogue } from "../../../application/ConsulterCatalogue"
-import { EtatCommande } from "../../../application/EtatCommande"
-import { JsonCommandeRepository } from "../../secondaires/json/JsonCommandeRepository";
-import { JsonProduitRepository } from "../../secondaires/json/JsonProduitRepository";
+// Adapter primaire (entrée) : traduit HTTP en appels aux cas d'usage.
+import { Router } from 'express';
+import type { PasserCommande } from '../../../application/PasserCommande';
+import type { ConsulterCatalogue } from '../../../application/ConsulterCatalogue';
+import type { ConsulterCommande } from '../../../application/ConsulterCommande';
+import { repondreErreur } from './erreurs';
 
+export interface CasUsages {
+    passerCommande: PasserCommande;
+    consulterCatalogue: ConsulterCatalogue;
+    consulterCommande: ConsulterCommande;
+}
 
-export function commandeRoutes(): Router {
+export function commandeRoutes(cas: CasUsages): Router {
     const router = Router();
-    const JCR = new JsonCommandeRepository;
-    const JPR = new JsonProduitRepository;
 
-    router.get('/produits', (req, res) => {
-        res.json(ConsulterCatalogue(JPR));
+    router.get('/produits', async (req, res) => {
+        res.json(await cas.consulterCatalogue.executer());
     });
 
-    router.post('/commandes', (req, res) => {
+    router.post('/commandes', async (req, res) => {
         try {
-            res.status(201).json(new PasserCommande(req.body,JCR));
+            res.status(201).json(await cas.passerCommande.executer(req.body));
         } catch (e) {
             repondreErreur(res, e);
         }
     });
 
-    router.get('/commandes/:id', (req, res) => {
+    router.get('/commandes/:id', async (req, res) => {
         try {
-            res.json(new ConsulterCommande(req.params.id,JCR));
-        } catch (e) {
-            repondreErreur(res, e);
-        }
-    });
-
-    router.patch('/commandes/:id/prete', (req, res) => {
-        try {
-            res.json(new EtatCommande(req.params.id));
+            res.json(await cas.consulterCommande.executer(req.params.id));
         } catch (e) {
             repondreErreur(res, e);
         }

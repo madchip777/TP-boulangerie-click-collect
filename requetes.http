@@ -14,7 +14,7 @@ Content-Type: application/json
     { "produitId": "baguette-tradition", "quantite": 2 },
     { "produitId": "croissant", "quantite": 6 }
   ],
-  "retrait": "2026-10-21T08:30:00"
+  "retrait": "2026-10-20T08:30:00"
 }
 
 ###
@@ -23,25 +23,8 @@ GET http://localhost:3000/commandes/C0001
 ###
 PATCH http://localhost:3000/commandes/C0001/prete
 
+###
+PATCH http://localhost:3000/commandes/C0001/annulation
 
-### Requete 2
-GET http://localhost:3000/produits
-
-### On l'envois
-POST http://localhost:3000/commandes
-Content-Type: application/json
-
-{
-  "client": "Romain Malin",
-  "telephone": "0612345677",
-  "lignes": [
-    { "produitId": "tarte-pommes-6", "quantite": 2 }
-  ],
-  "retrait": "2026-10-20T08:30:00"
-}
-
-### On la verifie
-GET http://localhost:3000/commandes/C0002
-
-### On la comfirme sur la boulangerie
-PATCH http://localhost:3000/commandes/C0002/prete
+###
+PATCH http://localhost:3000/commandes/C0001/retrait
