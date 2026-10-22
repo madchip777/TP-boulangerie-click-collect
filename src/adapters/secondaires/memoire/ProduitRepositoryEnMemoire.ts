@@ -1,5 +1,5 @@
-import type { Produit } from '../../../../../../Downloads/boulangerie-click-collect-seance3/src/domain/types';
-import type { ProduitRepository } from '../../../../../../Downloads/boulangerie-click-collect-seance3/src/application/ports/ProduitRepository';
+import type { Produit } from '../../../domain/types';
+import type { ProduitRepository } from '../../../application/ports/ProduitRepository';
 
 // Adapter secondaire pour les tests : tout reste en mémoire.
 export class ProduitRepositoryEnMemoire implements ProduitRepository {

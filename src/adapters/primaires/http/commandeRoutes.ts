@@ -22,7 +22,8 @@ export function commandeRoutes(cas: CasUsages): Router {
         try {
             res.status(201).json(await cas.passerCommande.executer(req.body));
         } catch (e) {
-            repondreErreur(res, e);
+            console.error(e);
+            repondreErreur(res, undefined, e);
         }
     });
 
@@ -30,7 +31,8 @@ export function commandeRoutes(cas: CasUsages): Router {
         try {
             res.json(await cas.consulterCommande.executer(req.params.id));
         } catch (e) {
-            repondreErreur(res, e);
+            console.error(e);
+            repondreErreur(res, undefined, e);
         }
     });
 

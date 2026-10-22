@@ -1,5 +1,5 @@
-import type { Commande } from '../../../../../../Downloads/boulangerie-click-collect-seance3/src/domain/types';
-import type { CommandeRepository } from '../../../../../../Downloads/boulangerie-click-collect-seance3/src/application/ports/CommandeRepository';
+import type { Commande } from '../../../domain/types';
+import type { CommandeRepository } from '../../../application/ports/CommandeRepository';
 
 export class CommandeRepositoryEnMemoire implements CommandeRepository {
   private readonly commandes = new Map<string, Commande>();

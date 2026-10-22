@@ -1,8 +1,8 @@
 import { describe, it, expect, beforeEach } from 'vitest';
-import { PasserCommande } from '../../../Downloads/boulangerie-click-collect-seance3/src/application/PasserCommande';
-import { ProduitRepositoryEnMemoire } from '../../../Downloads/boulangerie-click-collect-seance3/src/adapters/secondaires/memoire/ProduitRepositoryEnMemoire';
-import { CommandeRepositoryEnMemoire } from '../../../Downloads/boulangerie-click-collect-seance3/src/adapters/secondaires/memoire/CommandeRepositoryEnMemoire';
-import { HorlogeFixe } from '../../../Downloads/boulangerie-click-collect-seance3/src/adapters/secondaires/memoire/HorlogeFixe';
+import { PasserCommande } from '../src/application/PasserCommande';
+import { ProduitRepositoryEnMemoire } from '../src/adapters/secondaires/memoire/ProduitRepositoryEnMemoire';
+import { CommandeRepositoryEnMemoire } from '../src/adapters/secondaires/memoire/CommandeRepositoryEnMemoire';
+import { HorlogeFixe } from '../src/adapters/secondaires/memoire/HorlogeFixe';
 
 describe('Passer une commande', () => {
   let produits: ProduitRepositoryEnMemoire;

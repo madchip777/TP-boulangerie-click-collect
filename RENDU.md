@@ -1,0 +1,4 @@
+| Route historique                                | Règle(s) métier | Dépenance technique à isoler | Cas d'usage et port cibles | Tests de caractérisation |
+|:------------------------------------------------|:----------------|:-----------------------------|:---------------------------|:-------------------------|
+| <code>PATCH<br>/commandes/:id/prete</code>      |                 |                              |                            |                          |
+| <code>PATCH<br>/commandes/:id/annulation</code> |                 |                              |                            |                          |

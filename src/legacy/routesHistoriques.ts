@@ -2,7 +2,7 @@
 // Ajouté en urgence par un collègue pendant la migration :
 // accès direct au fichier JSON, SMS écrits dans la console, date système en dur.
 import { Router } from 'express';
-import type { JsonFileDb } from '../../../../Downloads/boulangerie-click-collect-seance3/src/adapters/secondaires/json/JsonFileDb';
+import type { JsonFileDb } from '../adapters/secondaires/json/JsonFileDb';
 
 export function routesHistoriques(db: JsonFileDb): Router {
   const router = Router();
