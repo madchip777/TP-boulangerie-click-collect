@@ -38,3 +38,8 @@ Test END2END = robot qui teste physiquement un produit, test de bout en bout, so
 
 1 UseCase = 1 Action (direction métier)
 
+
+"Archi" Couche est un element de l'Archi Hexagonal, tel qu'est le systeme de port de d'interface.
+L'Archi Ognion partage certain element, mais travaille sur un coeur plus lourd (souvent herité d'une base a grosse dète technique).
+
+

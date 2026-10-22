@@ -4,13 +4,13 @@
       "id": "baguette-tradition",
       "nom": "Baguette tradition",
       "prix": 130,
-      "stock": 54
+      "stock": 52
     },
     {
       "id": "croissant",
       "nom": "Croissant au beurre",
       "prix": 120,
-      "stock": 22
+      "stock": 16
     },
     {
       "id": "pain-au-chocolat",
@@ -109,6 +109,25 @@
       "total": 980,
       "statut": "EN_ATTENTE",
       "creeLe": "2026-10-20T09:11:21.035Z"
+    },
+    {
+      "id": "C0005",
+      "client": "Camille Martin",
+      "telephone": "0612345678",
+      "lignes": [
+        {
+          "produitId": "baguette-tradition",
+          "quantite": 2
+        },
+        {
+          "produitId": "croissant",
+          "quantite": 6
+        }
+      ],
+      "retrait": "2026-10-21T08:30:00",
+      "total": 980,
+      "statut": "EN_ATTENTE",
+      "creeLe": "2026-10-20T12:10:40.700Z"
     }
   ]
 }

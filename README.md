@@ -1,6 +1,6 @@
 # Le Fournil de Serris - Click & Collect (fil rouge du module Architecture Hexagonale & DDD, Bachelor 3).
 
-**État de ce kit :** version historique, tout le code est dans `src/main.ts`.
+**État de ce kit :** version historique, tout le code est dans `legacy`.
 
 **Objectif de la séance :** repérer les responsabilités mélangées puis découper l'application en trois couches (livret S1).
 

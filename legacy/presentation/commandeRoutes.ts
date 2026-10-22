@@ -2,7 +2,7 @@
 // Couche présentation : traduit HTTP <-> appels au métier. Aucune règle ici.
 import { Router, Response } from 'express';
 import { CommandeService } from '../metier/CommandeService';
-import { repondreErreur} from "./erreurRoutes";
+import { repondreErreur} from "./erreurs";
 
 export function commandeRoutes(): Router {
     const router = Router();

@@ -41,7 +41,7 @@ Content-Type: application/json
 }
 
 ### On la verifie
-GET http://localhost:3000/commandes/C0003
+GET http://localhost:3000/commandes/C0002
 
 ### On la comfirme sur la boulangerie
-PATCH http://localhost:3000/commandes/C0003/prete
+PATCH http://localhost:3000/commandes/C0002/prete
