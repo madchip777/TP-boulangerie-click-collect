@@ -1,5 +1,4 @@
-
-export type CodeErreur = number;
+export type CodeErreur = 'INVALIDE' | 'INTROUVABLE' | 'CONFLIT';
 
 export class ErreurMetier extends Error {
     constructor(message: string, readonly code: CodeErreur) {

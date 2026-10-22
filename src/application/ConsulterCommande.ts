@@ -7,7 +7,7 @@ export class ConsulterCommande {
 
     async executer(id: string): Promise<Commande> {
         const commande = await this.commandes.trouverParId(id);
-        if (!commande) throw new ErreurMetier('Commande introuvable', 404.11);
+        if (!commande) throw new ErreurMetier('Commande introuvable', 'INTROUVABLE');
         return commande;
     }
 }
